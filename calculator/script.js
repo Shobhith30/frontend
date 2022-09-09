@@ -5,7 +5,12 @@ function display(character) {
 }
 
 function calculate() {
-    result.innerHTML = (eval(result.innerHTML));
+    try {
+        result.innerHTML = eval(result.innerHTML);
+    } catch (e) {
+        alert("Invalid Expression");
+        result.innerHTML = '';
+    }
 }
 
 function toggleSign() {

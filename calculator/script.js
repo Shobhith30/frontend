@@ -1,22 +1,22 @@
 
 const result = document.getElementById("result");
 function display(character) {
-    result.innerHTML += character;
+    result.value += character;
 }
 
 function calculate() {
     try {
-        result.innerHTML = eval(result.innerHTML);
+        result.value = eval(result.value);
     } catch (e) {
         alert("Invalid Expression");
-        result.innerHTML = '';
+        result.value = '';
     }
 }
 
 function toggleSign() {
-    (result.innerHTML) *= -1
+    (result.value) *= -1
 }
 
 function clearData() {
-    result.innerHTML = '';
+    result.value = '';
 }
